@@ -1,4 +1,7 @@
-package Structure;
+package Implementation;
+
+import Structure.IEdge;
+import Structure.INode;
 
 public class Edge implements IEdge {
 

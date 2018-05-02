@@ -1,8 +1,13 @@
-package Structure;
+package Implementation;
+
+import Structure.IEdge;
+import Structure.INode;
+import Structure.IPath;
+import Structure.ISignalFlowGraph;
 
 import java.util.ArrayList;
 
-public class SignalFlowGraph implements  ISignalFlowGraph{
+public class SignalFlowGraph implements ISignalFlowGraph {
 
     private ArrayList<IPath> forwardPaths ;
     private ArrayList<IPath> loops ;

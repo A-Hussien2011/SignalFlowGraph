@@ -1,4 +1,6 @@
-package Structure;
+package Implementation;
+
+import Structure.INode;
 
 import java.util.ArrayList;
 

@@ -1,8 +1,12 @@
-package Structure;
+package Implementation;
+
+import Structure.IEdge;
+import Structure.INode;
+import Structure.IPath;
 
 import java.util.ArrayList;
 
-public class Path implements  IPath {
+public class Path implements IPath {
 
     private INode start ;
     private INode end ;

@@ -1,4 +1,9 @@
-package Structure;
+package Implementation;
+
+import Implementation.Edge;
+import Implementation.Node;
+import Implementation.Path;
+import Structure.INode;
 
 import java.util.ArrayList;
 
