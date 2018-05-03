@@ -20,6 +20,16 @@ public class Path implements IPath {
         this.nodes = nodes;
     }
 
+    public Path(INode start, INode end){
+        this.start = start;
+        this.end = end;
+    }
+
+    public  Path(){
+        this.nodes = new ArrayList<INode>();
+        this.edges = new ArrayList<IEdge>();
+    }
+
     public int numberOfNodes() {
         return nodes.size();
     }
@@ -53,5 +63,22 @@ public class Path implements IPath {
     @Override
     public ArrayList getEdges() {
         return edges ;
+    }
+
+    public void addNode(INode node){
+        nodes.add(node);
+    }
+
+    @Override
+    public void removeNodeAt(int nodeIndex) {
+        nodes.remove(nodeIndex);
+    }
+
+    public void setStart(INode start) {
+        this.start = start;
+    }
+
+    public void setEnd(INode end) {
+        this.end = end;
     }
 }
