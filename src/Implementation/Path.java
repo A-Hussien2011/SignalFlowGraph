@@ -7,6 +7,7 @@ import Structure.IPath;
 import java.util.ArrayList;
 
 public class Path implements IPath {
+
     private INode start ;
     private INode end ;
     private ArrayList<INode> nodes ;
@@ -45,14 +46,18 @@ public class Path implements IPath {
         this.start = start;
         this.end = end;
         this.edges = edges;
-        if(nodes.size() < 1){
-            nodes = this.addNodes(edges);
-        }
         this.nodes = nodes;
-        setGain();
     }
 
+    public Path(INode start, INode end){
+        this.start = start;
+        this.end = end;
+    }
 
+    public  Path(){
+        this.nodes = new ArrayList<INode>();
+        this.edges = new ArrayList<IEdge>();
+    }
 
     public int numberOfNodes() {
         return nodes.size();
@@ -66,7 +71,6 @@ public class Path implements IPath {
         this.edges = edges;
     }
 
-    @Override
     public ArrayList<INode> getNodes() {
         return nodes;
     }
@@ -93,5 +97,22 @@ public class Path implements IPath {
     @Override
     public ArrayList getEdges() {
         return edges ;
+    }
+
+    public void addNode(INode node){
+        nodes.add(node);
+    }
+
+    @Override
+    public void removeNodeAt(int nodeIndex) {
+        nodes.remove(nodeIndex);
+    }
+
+    public void setStart(INode start) {
+        this.start = start;
+    }
+
+    public void setEnd(INode end) {
+        this.end = end;
     }
 }

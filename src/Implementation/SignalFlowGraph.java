@@ -4,16 +4,23 @@ import Structure.IEdge;
 import Structure.INode;
 import Structure.IPath;
 import Structure.ISignalFlowGraph;
-import sun.security.x509.IPAddressName;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Stack;
 
 public class SignalFlowGraph implements ISignalFlowGraph {
 
-    private ArrayList<IPath> forwardPaths ;
-    private ArrayList<IPath> loops ;
+    public SignalFlowGraph(){
+        forwardPaths = new ArrayList<>() ;
+        loops = new ArrayList<>() ;
+
+    }
+
+    private ArrayList<IPath> forwardPaths;
+    private int numberOfPaths = 1;
+    private ArrayList<IPath> loops;
     private ArrayList<IEdge> edges ;
     private ArrayList<INode> nodes ;
 
@@ -21,7 +28,7 @@ public class SignalFlowGraph implements ISignalFlowGraph {
     public int getTransferFunction(ArrayList<INode>  Nodes, ArrayList edgesList) {
         int overAllTrasferFun =0;
         this.getForwardPaths(nodes.get(0) , nodes.get(nodes.size() - 1));
-        this.getLoops();
+        this.getLoops(nodes);
         ArrayList<ArrayList<IPath>>[] untouchedLoops = this.getUntouchedLoops(loops);
         for (IPath path:forwardPaths) {
             ArrayList<IPath> pathLoops = this.getPathLoops(path);
@@ -32,12 +39,33 @@ public class SignalFlowGraph implements ISignalFlowGraph {
         return overAllTrasferFun ;
     }
 
-    private ArrayList<IPath> getForwardPaths (INode startNode, INode finalNode){
-        return null ;
+    public ArrayList<IPath> getForwardPaths (INode startNode, INode finalNode){
+        getPaths(startNode, finalNode, new Stack());
+        return forwardPaths ;
     }
 
-    private ArrayList<IPath> getLoops(){
-        for(INode currentNode : nodes){
+    private void getPaths(INode start, INode end, Stack currentPath){
+        start.setVisited(true);
+        if(currentPath.isEmpty()) currentPath.push(start);
+        if(start == end){
+            IPath path = new Path();
+            path.setNodes(new ArrayList<>(currentPath));
+            path.setEnd(end);
+            forwardPaths.add(path);
+            return;
+        }
+        for(INode child : start.getForwardReferences()){
+            if(!child.isVisited()){
+                currentPath.push(child);
+                getPaths(child, end, currentPath);
+                currentPath.pop();
+                child.setVisited(false);
+            }
+        }
+    }
+
+    public ArrayList<IPath> getLoops(ArrayList<INode> listOfNodes){
+        for(INode currentNode : listOfNodes){
             ArrayList<INode> forwardNodes = currentNode.getForwardReferences();
             for(INode nextNode: forwardNodes){
                 if(nextNode.getIndex() < currentNode.getIndex()){
@@ -45,7 +73,7 @@ public class SignalFlowGraph implements ISignalFlowGraph {
                 }
             }
         }
-        return  null ;
+        return  loops;
     }
 
     public ArrayList<ArrayList<IPath>>[] getUntouchedLoops (ArrayList<IPath> paths){
