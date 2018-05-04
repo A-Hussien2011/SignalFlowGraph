@@ -4,8 +4,11 @@ import Structure.IEdge;
 import Structure.INode;
 import Structure.IPath;
 import Structure.ISignalFlowGraph;
+import sun.security.x509.IPAddressName;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class SignalFlowGraph implements ISignalFlowGraph {
 
@@ -15,8 +18,18 @@ public class SignalFlowGraph implements ISignalFlowGraph {
     private ArrayList<INode> nodes ;
 
     @Override
-    public String getTransferFunction(ArrayList<INode>  Nodes, ArrayList edgesList) {
-        return null;
+    public int getTransferFunction(ArrayList<INode>  Nodes, ArrayList edgesList) {
+        int overAllTrasferFun =0;
+        this.getForwardPaths(nodes.get(0) , nodes.get(nodes.size() - 1));
+        this.getLoops();
+        ArrayList<ArrayList<IPath>>[] untouchedLoops = this.getUntouchedLoops(loops);
+        for (IPath path:forwardPaths) {
+            ArrayList<IPath> pathLoops = this.getPathLoops(path);
+            ArrayList<ArrayList<IPath>>[] pathUntouchedLoops = this.getUntouchedLoops(pathLoops);
+            overAllTrasferFun += path.getGain() * this.getDelta(pathUntouchedLoops , pathLoops);
+        }
+        overAllTrasferFun /= this.getDelta(untouchedLoops , loops);
+        return overAllTrasferFun ;
     }
 
     private ArrayList<IPath> getForwardPaths (INode startNode, INode finalNode){
@@ -35,15 +48,114 @@ public class SignalFlowGraph implements ISignalFlowGraph {
         return  null ;
     }
 
-    private ArrayList<ArrayList<IPath>> getUntouchedLoops (){
-        return null;
+    public ArrayList<ArrayList<IPath>>[] getUntouchedLoops (ArrayList<IPath> paths){
+        ArrayList[] untouchedLoops = new ArrayList[paths.size()];
+        int iterations = (int) (Math.pow(2,paths.size()));
+        boolean loopNotTouched = true ;
+        Set touched = new HashSet();
+        int binary = 3 ;
+
+        do {
+            loopNotTouched = true ;
+            String binaryReperestation = Integer.toBinaryString(binary);
+            ArrayList <Integer> arrayOfIndexes = new ArrayList<>();
+            for (int index = binaryReperestation.indexOf('1'); index >= 0;
+                 index = binaryReperestation.indexOf('1', index + 1)){
+                arrayOfIndexes.add(binaryReperestation.length() -  1 - index);
+            }
+            touched.clear();
+            for (int i = 0; i < arrayOfIndexes.size() && arrayOfIndexes.size() > 1 ; i++) {
+               if(!insertPath(touched , paths.get(arrayOfIndexes.get(i)))){
+                  loopNotTouched = false;
+                  break;
+               }
+            }
+
+            if (loopNotTouched && arrayOfIndexes.size() > 1){
+                ArrayList arrayList1 = new ArrayList();
+                for (int i = 0; i < arrayOfIndexes.size() ; i++) {
+                    arrayList1.add(paths.get(arrayOfIndexes.get(i)));
+                }
+
+                if (untouchedLoops[arrayOfIndexes.size() - 2] == null)
+                {
+                    untouchedLoops[arrayOfIndexes.size() - 2] = new ArrayList();
+                }
+                untouchedLoops[arrayOfIndexes.size() - 2].add(arrayList1);
+            }
+
+            binary++;
+        }while (binary < iterations);
+
+        return untouchedLoops;
     }
 
-    private String getGain (IPath requiredPath){
-        return  null;
+    private boolean insertPath(Set touched, IPath path) {
+        ArrayList<INode> nodes = path.getNodes();
+        for (INode node : nodes){
+            if(!touched.add(node)){
+                return false ;
+            }
+        }
+        return true ;
     }
 
-    private ArrayList<IPath> getPathLoops (IPath forwardPath ){
-        return  null ;
+
+    private int getGain (IPath requiredPath){
+        int pathGain = 0 ;
+        for (IEdge edge: requiredPath.getEdges()) {
+            pathGain+= edge.getGain();
+        }
+        return  pathGain;
+    }
+
+    private ArrayList<IPath> getPathLoops (IPath forwardPath )
+    {
+        boolean unTouched ;
+        Set pathNodes = new HashSet();
+        ArrayList<IPath> untouchedLoops = new ArrayList<>();
+        for (INode node:forwardPath.getNodes()) {
+            pathNodes.add(node);
+        }
+        for (IPath loop:loops) {
+            Set Nodes = new HashSet(pathNodes);
+            unTouched = true;
+            for (INode node:loop.getNodes()) {
+                if(!Nodes.add(node)){
+                    unTouched = false;
+                    break;
+                }
+            }
+            if(unTouched){
+                untouchedLoops.add(loop);
+            }
+        }
+
+        return  untouchedLoops ;
+    }
+
+    public int getDelta(ArrayList<ArrayList<IPath>>[] loops , ArrayList<IPath> allLoops){
+        int loopsGain = 0;
+        for (IPath path:allLoops) {
+            loopsGain += path.getGain();
+        }
+            int delta = 1 - loopsGain;
+            int sign = -1 ;
+        for (int i = 0; i < loops.length ; i++) {
+            if(loops[i] != null){
+                ArrayList<ArrayList<IPath>> untouchedLoops = loops[i];
+                int sum = 0;
+                for (int j = 0; j < untouchedLoops.size() ; j++) {
+                    int multiply = 1 ;
+                    ArrayList<IPath> untouchedSet = untouchedLoops.get(j);
+                    for (int k = 0; k < untouchedSet.size() ; k++) {
+                        multiply *= untouchedSet.get(k).getGain();
+                    }
+                    sum += multiply ;
+                }
+                delta += (Math.pow(sign , i)) * sum ;
+            }
+        }
+        return delta;
     }
 }

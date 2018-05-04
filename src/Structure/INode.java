@@ -6,5 +6,5 @@ public interface INode {
 
    int getIndex();
    ArrayList getForwardReferences() ;
-
+   INode  addForwardReference(INode node);
 }
