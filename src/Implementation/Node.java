@@ -24,12 +24,10 @@ public class Node implements INode {
         this.forwardReferences = new ArrayList<>();
     }
 
+
     @Override
     public int getIndex() {
         return index;
-    }
-    public void setIndex(int index) {
-        this.index = index;
     }
 
     @Override

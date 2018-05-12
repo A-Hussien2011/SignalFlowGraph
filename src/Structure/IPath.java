@@ -8,9 +8,8 @@ public interface IPath {
     INode getEnd ();
     int getGain();
     ArrayList<INode> getNodes();
-    ArrayList getEdges ();
+    ArrayList<IEdge> getEdges ();
     void addNode(INode node);
-    void removeNodeAt(int nodeIndex);
     void setEnd(INode end);
     void setStart(INode start);
     void setNodes(ArrayList<INode> nodes);
