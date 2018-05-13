@@ -8,5 +8,6 @@ public interface INode {
    ArrayList<INode> getForwardReferences() ;
    boolean isVisited();
    void setVisited(boolean visited);
-   public void setForwardReferences(ArrayList<INode> forwardReferences);
+   void setForwardReferences(ArrayList<INode> forwardReferences);
+   INode  addForwardReference(INode node);
 }

@@ -19,14 +19,11 @@ public class Node implements INode {
 
 
 
-    public Node(int index, ArrayList<INode> forwardReferences) {
+    public Node(int index) {
         this.index = index;
-        this.forwardReferences = forwardReferences;
+        this.forwardReferences = new ArrayList<>();
     }
-    public Node(int index){
-        forwardReferences = new ArrayList<>();
-        this.index = index;
-    }
+
 
     @Override
     public int getIndex() {
@@ -43,5 +40,10 @@ public class Node implements INode {
 
     public void setForwardReferences(ArrayList<INode> forwardReferences) {
         this.forwardReferences = forwardReferences;
+    }
+    @Override
+    public INode addForwardReference(INode node){
+        this.forwardReferences.add(node);
+        return this;
     }
 }
