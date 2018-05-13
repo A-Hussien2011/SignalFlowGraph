@@ -24,6 +24,7 @@ public class Node implements INode {
         this.forwardReferences = forwardReferences;
     }
     public Node(int index){
+        forwardReferences = new ArrayList<>();
         this.index = index;
     }
 
