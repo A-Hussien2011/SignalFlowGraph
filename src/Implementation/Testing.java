@@ -35,7 +35,7 @@ public class Testing {
         SignalFlowGraph sgf = new SignalFlowGraph();
 
 //        ArrayList paths = sgf.getForwardPaths(x1,x3);
-        ArrayList loops = sgf.getLoops(nodes);
+        ArrayList loops = sgf.constructLoops(nodes);
         int x = 5;
 
 

@@ -17,6 +17,14 @@ public class SignalFlowGraph implements ISignalFlowGraph {
     private ArrayList<INode> nodes;
     private ArrayList<IEdge> edges;
     private float overAllTrasferFun;
+    private ArrayList<ArrayList<IPath>>[] untouchedLoops;
+
+    public ArrayList<Float> getDeltas() {
+        return deltas;
+    }
+
+    private ArrayList<Float> deltas ;
+
     public SignalFlowGraph() {
         loops = new ArrayList<>();
 
@@ -28,15 +36,17 @@ public class SignalFlowGraph implements ISignalFlowGraph {
         this.edges = edgesList;
         overAllTrasferFun = 0;
         this.forwardPaths = this.getForwardPaths(Nodes.get(0), Nodes.get(Nodes.size() - 1));
-        this.getLoops(Nodes);
+        this.constructLoops(Nodes);
+        this.untouchedLoops = this.getUntouchedLoops(loops);
+        deltas = new ArrayList(forwardPaths.size());
+        deltas.add(this.getDelta(untouchedLoops, loops));
         for (IPath path : forwardPaths) {
             ArrayList<IPath> pathLoops = this.getPathLoops(path);
             ArrayList<ArrayList<IPath>>[] pathUntouchedLoops = this.getUntouchedLoops(pathLoops);
-            overAllTrasferFun += path.getGain() * this.getDelta(pathUntouchedLoops, pathLoops);
+            deltas.add(this.getDelta(pathUntouchedLoops, pathLoops));
+            overAllTrasferFun += path.getGain() * deltas.get(deltas.size() - 1);
         }
-        ArrayList<ArrayList<IPath>>[] untouchedLoops = this.getUntouchedLoops(loops);
-        float delta = this.getDelta(untouchedLoops , loops);
-        overAllTrasferFun /= this.getDelta(untouchedLoops, loops);
+        overAllTrasferFun /= deltas.get(0);
         return overAllTrasferFun;
     }
 
@@ -70,7 +80,7 @@ public class SignalFlowGraph implements ISignalFlowGraph {
         start.setVisited(false);
     }
 
-    public ArrayList<IPath> getLoops(ArrayList<INode> listOfNodes){
+    public ArrayList<IPath> constructLoops(ArrayList<INode> listOfNodes){
         for(INode currentNode : listOfNodes){
             ArrayList<INode> forwardNodes = currentNode.getForwardReferences();
             for(INode nextNode: forwardNodes){
@@ -201,6 +211,9 @@ public class SignalFlowGraph implements ISignalFlowGraph {
 
     public float getOverAllTrasferFun() {
         return overAllTrasferFun;
+    }
+    public ArrayList<ArrayList<IPath>>[] getUntouchedLoops() {
+        return untouchedLoops;
     }
 
 }

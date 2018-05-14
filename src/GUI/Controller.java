@@ -8,6 +8,10 @@ import Structure.ISignalFlowGraph;
 import java.util.ArrayList;
 
 public class Controller {
+    public ISignalFlowGraph getSignalFlowGraph() {
+        return signalFlowGraph;
+    }
+
     private ISignalFlowGraph signalFlowGraph;
 
 

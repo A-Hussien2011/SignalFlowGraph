@@ -6,7 +6,7 @@ public interface IPath {
 
     INode getStart();
     INode getEnd ();
-    int getGain();
+    float getGain();
     ArrayList<INode> getNodes();
     ArrayList<IEdge> getEdges ();
     void addNode(INode node);

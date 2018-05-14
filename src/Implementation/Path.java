@@ -11,7 +11,7 @@ public class Path implements IPath {
     private INode end ;
     private ArrayList<INode> nodes ;
     private ArrayList<IEdge> edges ;
-    private int gain ;
+    private float gain ;
 
     public Path(INode start, ArrayList<IEdge> edges) {
         this(start , start , edges);
@@ -95,7 +95,7 @@ public class Path implements IPath {
     }
 
     @Override
-    public int getGain() {
+    public float getGain() {
         return this.gain;
     }
 
