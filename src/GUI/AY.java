@@ -21,8 +21,8 @@ import java.util.Map;
 
 
 public class AY extends JFrame {
-    ArrayList<INode> nodes = new ArrayList<>();
-    ArrayList<Object> graphNodes ;
+    ArrayList<INode> nodes;
+    ArrayList<Object> graphNodes;
     mxGraph graph = new mxGraph();
     Object parent = graph.getDefaultParent();
     ArrayList<IEdge> edges = new ArrayList<>();
@@ -41,6 +41,8 @@ public class AY extends JFrame {
 
 
     public AY() {
+        nodes = new ArrayList<>();
+        graphNodes = new ArrayList<>();
         this.DrawGraph();
         mxStylesheet stylesheet = graph.getStylesheet();
         Hashtable<String, Object> style = new Hashtable<String, Object>();

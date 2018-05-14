@@ -56,6 +56,7 @@ public class SignalFlowGraph implements ISignalFlowGraph {
             path.setStart(pathNodes.get(0));
             path.setEnd(end);
             forwardPaths.add(path);
+            start.setVisited(false);
             return;
         }
         for(INode child : start.getForwardReferences()){
