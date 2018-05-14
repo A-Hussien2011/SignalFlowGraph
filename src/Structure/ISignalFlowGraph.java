@@ -7,5 +7,8 @@ public interface ISignalFlowGraph {
 
 
     float getTransferFunction(ArrayList<INode> Nodes, ArrayList edges);
+    ArrayList<IPath> getLoops();
+    ArrayList<IPath> getForwardPaths();
+    ArrayList<Float> getDeltas();
 
 }

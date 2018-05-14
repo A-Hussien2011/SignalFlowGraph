@@ -4,11 +4,13 @@ import Implementation.Edge;
 import Implementation.Node;
 import Structure.IEdge;
 import Structure.INode;
+import Structure.IPath;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.util.mxConstants;
 import com.mxgraph.view.mxGraph;
 import com.mxgraph.view.mxStylesheet;
 import javax.swing.*;
+import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,6 +39,9 @@ public class AY extends JFrame {
     private JButton btnFunction;
     private JButton newGraphButton;
     private int numNodes = 0;
+    private JPanel InformationPane1;
+    private JTable forwardPathsTable;
+    private JTable LoopsTable;
 
 
     public AY() {
@@ -121,10 +126,64 @@ public class AY extends JFrame {
         btnFunction.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, controller.getFunction(nodes, edges));
-
+               String result =  controller.getFunction(nodes, edges);
+                InformationPane1 = new JPanel();
+                ArrayList<IPath> paths = controller.getSignalFlowGraph().getForwardPaths();
+                ArrayList<IPath> loops = controller.getSignalFlowGraph().getLoops();
+                Object[][] data1 = getData(paths);
+                String[] columnNames1 = {"Forward Paths", "Gain"};
+                forwardPathsTable = new JTable(data1, columnNames1);
+                setJTableColumnsWidth(forwardPathsTable, 480, 10, 30, 30, 30);
+                JScrollPane tableContainer1 = new JScrollPane(forwardPathsTable);
+                String[] columnNames2 = {"Loops", "Gain"};
+                Object[][] data2 = getData(loops);
+                LoopsTable = new JTable(data2 , columnNames2);
+                JScrollPane tableContainer2 = new JScrollPane(LoopsTable);
+                JLabel label = new JLabel();
+                ArrayList<Float> deltas = controller.getSignalFlowGraph().getDeltas() ;
+                for (int i = 0; i < deltas.size() ; i++) {
+                        label.setText(label.getText() + "\n" + "Delta" + String.valueOf(i) +" = " + String.valueOf(deltas.get(i)) );
+                }
+                InformationPane1.add(tableContainer1, BorderLayout.AFTER_LAST_LINE);
+                InformationPane1.add(tableContainer2, BorderLayout.AFTER_LAST_LINE);
+                InformationPane1.add(label , BorderLayout.CENTER);
+                InformationPane1.add(new Label("\nTransfer Function = " + result));
+                JOptionPane.showMessageDialog(null,InformationPane1  ,"Information",JOptionPane.INFORMATION_MESSAGE);
             }
+
+
         });
+
+    }
+    public static void setJTableColumnsWidth(JTable table, int tablePreferredWidth,
+                                             double... percentages) {
+        double total = 0;
+        for (int i = 0; i < table.getColumnModel().getColumnCount(); i++) {
+            total += percentages[i];
+        }
+
+        for (int i = 0; i < table.getColumnModel().getColumnCount(); i++) {
+            TableColumn column = table.getColumnModel().getColumn(i);
+            column.setPreferredWidth((int)
+                    (tablePreferredWidth * (percentages[i] / total)));
+        }
+    }
+
+    private Object[][] getData(ArrayList<IPath> paths) {
+        Object[][] data = new Object[paths.size()][2];
+        int i = 0 ;
+        for (IPath path:paths) {
+            String pathName = "";
+            for (INode node:path.getNodes()) {
+                pathName += String.valueOf(node.getIndex());
+            }
+            Object[] object = new Object[2];
+            object[0] = pathName;
+            object[1] = path.getGain();
+            data[i] = object ;
+            i++;
+        }
+        return data;
     }
 
     public static void main(String[] args) {
