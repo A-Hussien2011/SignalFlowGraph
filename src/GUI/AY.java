@@ -8,7 +8,6 @@ import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.util.mxConstants;
 import com.mxgraph.view.mxGraph;
 import com.mxgraph.view.mxStylesheet;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

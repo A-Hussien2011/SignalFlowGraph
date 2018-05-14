@@ -2,31 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bf854ae-31b4-44c8-bd9c-d8684189b20e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/SignalFlowGraph.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/mxCircleLayout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jgraphx.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jgraphx.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SignalFlowGraph.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SignalFlowGraph.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SignalFlowGraph/Implementation/Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SignalFlowGraph/Implementation/Node.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SignalFlowGraph/Implementation/Path.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SignalFlowGraph/Implementation/Path.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SignalFlowGraph/Implementation/SignalFlowGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SignalFlowGraph/Implementation/SignalFlowGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SignalFlowGraph/Implementation/Testing.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SignalFlowGraph/Implementation/Testing.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SignalFlowGraph/Structure/INode.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SignalFlowGraph/Structure/INode.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SignalFlowGraph/Structure/IPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SignalFlowGraph/Structure/IPath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SignalFlowGraph/Structure/ISignalFlowGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SignalFlowGraph/Structure/ISignalFlowGraph.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/AY.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AY.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/AY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/AY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Implementation/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Implementation/Edge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Implementation/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Implementation/Node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Implementation/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Implementation/Path.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Implementation/SignalFlowGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Implementation/SignalFlowGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Implementation/Testing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Implementation/Testing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Structure/IEdge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structure/IEdge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Structure/INode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structure/INode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Structure/IPath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structure/IPath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Structure/ISignalFlowGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Structure/ISignalFlowGraph.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -61,8 +39,8 @@
       <file leaf-file-name="main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Implementation/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="1479">
+              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
             </state>
           </provider>
         </entry>
@@ -70,7 +48,7 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="221">
               <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -79,13 +57,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AY.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AY.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI/AY.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="765">
+              <caret line="135" column="28" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#AY#0;class#AY#0" />
                 <element signature="e#1529#1545#0" expanded="true" />
                 <element signature="e#3989#4187#0" expanded="true" />
                 <element signature="e#4186#4187#0" expanded="true" />
@@ -93,6 +72,9 @@
                 <element signature="e#4421#4422#0" expanded="true" />
                 <element signature="e#4460#4655#0" expanded="true" />
                 <element signature="e#4654#4655#0" expanded="true" />
+                <element signature="method#main#0;class#AY#0" />
+                <element signature="method#DrawGraph#0;class#AY#0" />
+                <element signature="e#3733#3812#0" />
               </folding>
             </state>
           </provider>
@@ -101,7 +83,7 @@
       <file leaf-file-name="mxCircleLayout.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/mxCircleLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
+            <state relative-caret-position="170">
               <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -140,60 +122,6 @@
       <file leaf-file-name="AY.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/AY.form">
           <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file leaf-file-name="Path.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Implementation/Path.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-507">
-              <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1226#1227#0" expanded="true" />
-                <element signature="e#1309#1310#0" expanded="true" />
-                <element signature="e#1351#1352#0" expanded="true" />
-                <element signature="e#1379#1380#0" expanded="true" />
-                <element signature="e#1431#1432#0" expanded="true" />
-                <element signature="e#1465#1466#0" expanded="true" />
-                <element signature="e#1510#1511#0" expanded="true" />
-                <element signature="e#1538#1539#0" expanded="true" />
-                <element signature="e#1581#1582#0" expanded="true" />
-                <element signature="e#1607#1608#0" expanded="true" />
-                <element signature="e#1649#1650#0" expanded="true" />
-                <element signature="e#1681#1682#0" expanded="true" />
-                <element signature="e#1730#1731#0" expanded="true" />
-                <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1797#1798#0" expanded="true" />
-                <element signature="e#1828#1829#0" expanded="true" />
-                <element signature="e#1869#1870#0" expanded="true" />
-                <element signature="e#1903#1904#0" expanded="true" />
-                <element signature="e#1940#1941#0" expanded="true" />
-                <element signature="e#1970#1971#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignalFlowGraph.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Implementation/SignalFlowGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#SignalFlowGraph#0;class#SignalFlowGraph#0" />
-                <element signature="method#getUntouchedLoops#0;class#SignalFlowGraph#0" />
-                <element signature="method#insertPath#0;class#SignalFlowGraph#0" />
-                <element signature="method#getDelta#0;class#SignalFlowGraph#0" />
-                <element signature="e#6775#6776#0" expanded="true" />
-                <element signature="e#6803#6804#0" expanded="true" />
-                <element signature="e#6852#6853#0" expanded="true" />
-                <element signature="e#6887#6888#0" expanded="true" />
-                <element signature="e#6930#6931#0" expanded="true" />
-                <element signature="e#6970#6971#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
         </entry>
       </file>
       <file leaf-file-name="ArrayList.java" pinned="false" current-in-tab="false">
@@ -261,9 +189,9 @@
         <option value="$PROJECT_DIR$/src/Implementation/Path.java" />
         <option value="$PROJECT_DIR$/src/GUI/AY.form" />
         <option value="$PROJECT_DIR$/src/GUI/mxCircleLayout.java" />
-        <option value="$PROJECT_DIR$/src/GUI/AY.java" />
-        <option value="$PROJECT_DIR$/src/Implementation/main.java" />
         <option value="$PROJECT_DIR$/src/Implementation/SignalFlowGraph.java" />
+        <option value="$PROJECT_DIR$/src/Implementation/main.java" />
+        <option value="$PROJECT_DIR$/src/GUI/AY.java" />
       </list>
     </option>
   </component>
@@ -277,7 +205,7 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
+    <option name="x" value="-7" />
     <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
@@ -359,7 +287,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.main">
+  <component name="RunManager" selected="Application.AY">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -457,8 +385,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.main" />
         <item itemvalue="Application.AY" />
+        <item itemvalue="Application.main" />
         <item itemvalue="Application.Testing" />
       </list>
     </recent_temporary>
@@ -483,7 +411,7 @@
       <workItem from="1525858967347" duration="48000" />
       <workItem from="1525868852222" duration="12000" />
       <workItem from="1526131870613" duration="665000" />
-      <workItem from="1526237237757" duration="25848000" />
+      <workItem from="1526237237757" duration="27944000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/A-Hussien2011/SignalFlowGraph&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/SignalFlowGraph/Implementation/Node.class&#10;#&#9;out/production/SignalFlowGraph/Implementation/Path.class&#10;#&#9;out/production/SignalFlowGraph/Implementation/SignalFlowGraph.class&#10;#&#9;out/production/SignalFlowGraph/Implementation/Testing.class&#10;#&#9;out/production/SignalFlowGraph/Structure/INode.class&#10;#&#9;out/production/SignalFlowGraph/Structure/IPath.class&#10;#&#9;out/production/SignalFlowGraph/Structure/ISignalFlowGraph.class&#10;#&#9;src/Implementation/Node.java&#10;#&#9;src/Implementation/Path.java&#10;#&#9;src/Implementation/SignalFlowGraph.java&#10;#&#9;src/Structure/INode.java&#10;#&#9;src/Structure/IPath.java&#10;#&#9;src/Structure/ISignalFlowGraph.java">
       <created>1525439955381</created>
@@ -499,14 +427,29 @@
       <option name="project" value="LOCAL" />
       <updated>1526168152536</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="all done .">
+      <created>1526300971340</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1526300971340</updated>
+    </task>
+    <task id="LOCAL-00004" summary="all done .">
+      <created>1526302634429</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526302634429</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32842000" />
+    <option name="totallyTimeSpent" value="34938000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -518,17 +461,17 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2082671" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.66136724" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.3290938" />
       <window_info anchor="right" id="Palette&#9;" order="9" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290938" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34340224" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34340224" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.329429" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4935065" visible="true" weight="0.22474378" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4935065" visible="true" weight="0.26281112" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Learn" order="6" />
       <window_info anchor="right" id="Theme Preview" order="6" />
@@ -539,38 +482,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34340224" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Commander" order="1" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Favorites" order="5" sideWeight="0.5064935" side_tool="true" weight="0.02489019" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Capture Tool" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.3290938" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3290938" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4935065" weight="0.02489019" />
-      <window_info id="Learn" order="6" />
-      <window_info anchor="right" id="Database" order="8" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.329429" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2082671" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -582,6 +493,7 @@
     <MESSAGE value="Merge branch 'master' of https://github.com/A-Hussien2011/SignalFlowGraph&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;out/production/SignalFlowGraph/Implementation/Node.class&#10;#&#9;out/production/SignalFlowGraph/Implementation/Path.class&#10;#&#9;out/production/SignalFlowGraph/Implementation/SignalFlowGraph.class&#10;#&#9;out/production/SignalFlowGraph/Implementation/Testing.class&#10;#&#9;out/production/SignalFlowGraph/Structure/INode.class&#10;#&#9;out/production/SignalFlowGraph/Structure/IPath.class&#10;#&#9;out/production/SignalFlowGraph/Structure/ISignalFlowGraph.class&#10;#&#9;src/Implementation/Node.java&#10;#&#9;src/Implementation/Path.java&#10;#&#9;src/Implementation/SignalFlowGraph.java&#10;#&#9;src/Structure/INode.java&#10;#&#9;src/Structure/IPath.java&#10;#&#9;src/Structure/ISignalFlowGraph.java" />
     <MESSAGE value="all done ." />
     <option name="LAST_COMMIT_MESSAGE" value="all done ." />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -606,7 +518,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Implementation/SignalFlowGraph.java</url>
-          <line>76</line>
+          <line>77</line>
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
@@ -1144,22 +1056,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/AY.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/AY.java">
+    <entry file="file://$PROJECT_DIR$/src/Implementation/Testing.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+        <state relative-caret-position="224">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1529#1545#0" expanded="true" />
-            <element signature="e#3989#4187#0" expanded="true" />
-            <element signature="e#4186#4187#0" expanded="true" />
-            <element signature="e#4226#4422#0" expanded="true" />
-            <element signature="e#4421#4422#0" expanded="true" />
-            <element signature="e#4460#4655#0" expanded="true" />
-            <element signature="e#4654#4655#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Implementation/SignalFlowGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="52" column="70" lean-forward="true" selection-start-line="52" selection-start-column="70" selection-end-line="52" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#SignalFlowGraph#0;class#SignalFlowGraph#0" />
+            <element signature="method#getUntouchedLoops#0;class#SignalFlowGraph#0" />
+            <element signature="method#insertPath#0;class#SignalFlowGraph#0" />
+            <element signature="method#getDelta#0;class#SignalFlowGraph#0" />
+            <element signature="e#6775#6776#0" expanded="true" />
+            <element signature="e#6803#6804#0" expanded="true" />
+            <element signature="e#6852#6853#0" expanded="true" />
+            <element signature="e#6887#6888#0" expanded="true" />
+            <element signature="e#6930#6931#0" expanded="true" />
+            <element signature="e#6970#6971#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1194,19 +1116,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Implementation/Testing.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/AY.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        <state relative-caret-position="221">
+          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Implementation/main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/mxCircleLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
+        <state relative-caret-position="170">
           <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1241,39 +1173,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/Controller.java">
+    <entry file="file://$PROJECT_DIR$/src/GUI/AY.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="13" column="21" lean-forward="true" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+        <state relative-caret-position="765">
+          <caret line="135" column="28" selection-start-line="135" selection-start-column="28" selection-end-line="135" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Implementation/main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Implementation/SignalFlowGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#SignalFlowGraph#0;class#SignalFlowGraph#0" />
-            <element signature="method#getUntouchedLoops#0;class#SignalFlowGraph#0" />
-            <element signature="method#insertPath#0;class#SignalFlowGraph#0" />
-            <element signature="method#getDelta#0;class#SignalFlowGraph#0" />
-            <element signature="e#6775#6776#0" expanded="true" />
-            <element signature="e#6803#6804#0" expanded="true" />
-            <element signature="e#6852#6853#0" expanded="true" />
-            <element signature="e#6887#6888#0" expanded="true" />
-            <element signature="e#6930#6931#0" expanded="true" />
-            <element signature="e#6970#6971#0" expanded="true" />
+            <element signature="method#AY#0;class#AY#0" />
+            <element signature="e#1529#1545#0" expanded="true" />
+            <element signature="e#3989#4187#0" expanded="true" />
+            <element signature="e#4186#4187#0" expanded="true" />
+            <element signature="e#4226#4422#0" expanded="true" />
+            <element signature="e#4421#4422#0" expanded="true" />
+            <element signature="e#4460#4655#0" expanded="true" />
+            <element signature="e#4654#4655#0" expanded="true" />
+            <element signature="method#main#0;class#AY#0" />
+            <element signature="method#DrawGraph#0;class#AY#0" />
+            <element signature="e#3733#3812#0" />
           </folding>
         </state>
       </provider>
