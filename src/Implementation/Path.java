@@ -64,6 +64,27 @@ public class Path implements IPath {
     }
 
     @Override
+    public void addEdges(ArrayList<IEdge> allEdges) {
+        this.edges = new ArrayList<>();
+        for (int i = 0; i < nodes.size() - 1; i++) {
+            IEdge edge = getTheEdge(nodes.get(i), nodes.get(i + 1), allEdges);
+            if (edge != null)
+                this.edges.add(edge);
+        }
+        setGain();
+    }
+
+    private IEdge getTheEdge(INode iNode, INode iNode1, ArrayList<IEdge> allEdges) {
+            for (IEdge edge : allEdges) {
+                if (edge.getStart().equals(iNode) && edge.getEnd().equals(iNode1)) {
+                    return edge;
+                }
+            }
+            return null;
+
+    }
+
+    @Override
     public INode getStart() {
         return start;
     }
@@ -82,6 +103,8 @@ public class Path implements IPath {
     public ArrayList getEdges() {
         return edges ;
     }
+
+
 
     public void addNode(INode node){
         nodes.add(node);

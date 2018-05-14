@@ -6,6 +6,6 @@ public interface ISignalFlowGraph {
     // TODO type of transfer funcion
 
 
-    int getTransferFunction(ArrayList<INode> Nodes , ArrayList edges);
+    float getTransferFunction(ArrayList<INode> Nodes, ArrayList edges);
 
 }

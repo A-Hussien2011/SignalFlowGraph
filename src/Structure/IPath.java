@@ -15,4 +15,5 @@ public interface IPath {
     void setNodes(ArrayList<INode> nodes);
 
 
+    void addEdges(ArrayList<IEdge> edges);
 }

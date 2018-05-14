@@ -1,16 +1,11 @@
 package Implementation;
 
-import Implementation.Edge;
-import Implementation.Node;
-import Implementation.Path;
 import Structure.INode;
-import Structure.IPath;
-import Structure.ISignalFlowGraph;
 
 import java.util.ArrayList;
 
 public class Testing {
-    public static void main(String args[]){
+    public static void main(String args[]) {
         ArrayList tmp1 = new ArrayList(2);
         ArrayList tmp2 = new ArrayList(1);
         ArrayList tmp3 = new ArrayList(2);
@@ -21,6 +16,7 @@ public class Testing {
 //        INode x4 = new Node(4);
 //        INode x5 = new Node(5);
         tmp1.add(x2);
+        tmp1.add(x1);
         tmp1.add(x3);
         tmp2.add(x3);
         tmp3.add(x2);

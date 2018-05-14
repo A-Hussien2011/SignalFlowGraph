@@ -7,7 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="jgraphx" level="project" />
+    <orderEntry type="library" name="jgraphx" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
@@ -18,5 +18,24 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="jgoodies-forms-1.4.0" level="project" />
+    <orderEntry type="library" name="SignalFlowGraph" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/jgrapht.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/jgraphx.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

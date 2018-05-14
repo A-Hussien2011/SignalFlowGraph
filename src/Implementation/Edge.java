@@ -5,9 +5,9 @@ import Structure.INode;
 
 public class Edge implements IEdge {
 
-    private INode start ;
-    private INode end ;
-    private int gain ;
+    private INode start;
+    private INode end;
+    private int gain;
 
     public Edge(INode start, INode end, int gain) {
         this.start = start;
