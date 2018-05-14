@@ -92,6 +92,9 @@ public class AY extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 graph.removeCells(graph.getChildCells(graph.getDefaultParent(), true, true));
                 numNodes = 0;
+                nodes = new ArrayList<INode>();
+                graphNodes = new ArrayList<>();
+                edges = new ArrayList<IEdge>();
             }
         });
         txtStartNode.addFocusListener(new FocusAdapter() {
